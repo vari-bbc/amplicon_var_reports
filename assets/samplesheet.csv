@@ -1,0 +1,4 @@
+sample,fq1,fq2
+sample1,SRR30620730_1.fastq.gz,SRR30620730_2.fastq.gz
+sample1,SRR30620730.2_1.fastq.gz,SRR30620730.2_2.fastq.gz
+sample2,SRR30620731_1.fastq.gz,SRR30620731_2.fastq.gz
