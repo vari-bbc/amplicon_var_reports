@@ -17,6 +17,7 @@ include { CALL_VARIANTS } from './modules/call_variants'
 include { CLASSIFY_READS} from './modules/classify_reads'
 include { SUMMARIZE_VCF} from './modules/summarize_vcf'
 include { COLLECT_SUMMARIES} from './modules/collect_summaries'
+include { CREATE_IGV_REPORT} from './modules/create_igv_report'
 
 /*
 
@@ -41,6 +42,14 @@ workflow {
     mapped_ch = ALIGN_MINIMAP2(sample_ch)
 
     vcf_ch = CALL_VARIANTS(mapped_ch)
+
+    igv_report_input_ch = mapped_ch
+        .join(vcf_ch, by: [0,1])
+        .map { sample_id, amplicon, reference, bam, bai, reference_for_vcf, vcf, tbi ->
+            tuple(sample_id, amplicon, reference, bam, bai, vcf, tbi)
+        }
+
+    igv_report_ch = CREATE_IGV_REPORT(igv_report_input_ch)
 
     (classification_ch, classification_summary_ch) = CLASSIFY_READS(mapped_ch)
 
