@@ -8,5 +8,5 @@ testing*
 *.pyc
 null/
 samplesheet.tsv
-raw_fastq/
-ref_fasta/
+raw_fastq/*.fa*
+ref_fasta/*.fa*

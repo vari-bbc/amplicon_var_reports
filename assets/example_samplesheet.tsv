@@ -1,0 +1,4 @@
+sample_id	amplicon	fastq	ref_fasta
+insert	insert	raw_fastq/insert_insert.fastq.gz	ref_fasta/insert_insert.fasta
+short	flank5	raw_fastq/short_flank5.fastq.gz	ref_fasta/short_flank5.fasta
+long	flank3	raw_fastq/long_flank3.fastq.gz	ref_fasta/long_flank3.fasta
