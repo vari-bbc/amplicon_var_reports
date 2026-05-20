@@ -2,11 +2,12 @@
 work/
 data/
 results/
+results_*/
 .DS_Store
 testing/
 testing*
 *.pyc
 null/
-samplesheet.tsv
+samplesheet*.tsv
 raw_fastq/*.fa*
 ref_fasta/*.fa*
