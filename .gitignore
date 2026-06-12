@@ -11,3 +11,4 @@ null/
 samplesheet*.tsv
 raw_fastq/*.fa*
 ref_fasta/*.fa*
+conda*/
